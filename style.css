@@ -30,18 +30,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 40px 30px;
 
   display: flex;
   flex-direction: column;
-  gap: 150px;
 }
 
 /* Mobile Nav */
 .header .mobile-nav {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-
+  padding: 40px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,12 @@
 }
 
 /* Mobile menu design */
-.hidden {
+
+.header .desktop-nav {
+  display: none;
+}
+
+.mobile-nav .mobile-hidden {
   display: none;
 }
 
@@ -106,9 +111,13 @@
 /* Heading */
 
 .header .heading {
-  min-width: 300px;
-  padding: 26px;
-  border: 2px solid var(--white);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
 }
 
 .heading h1 {
@@ -117,6 +126,8 @@
   text-transform: uppercase;
   color: var(--white);
   font-weight: 300;
+  border: 2px solid var(--white);
+  padding: 24px;
 }
 
 /* Section1 design */
@@ -195,6 +206,11 @@
   background-size: cover;
 }
 
+.sec2-gallary .gallary:hover {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
 .gallary p {
   background-image: linear-gradient(
     to left,
@@ -245,7 +261,7 @@
   background-image: url(./images/mobile/image-fisheye.jpg);
 }
 
-.section2 .btn {
+.section2 .sec2-mobile-btn {
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 14px;
@@ -259,7 +275,7 @@
   cursor: pointer;
 }
 
-.section2 .btn:hover {
+.section2 .sec2-mobile-btn:hover {
   color: var(--white);
   background-color: var(--black);
 }
@@ -310,4 +326,257 @@ footer .mobile-footer {
 
 .desktop-footer-copyright p {
   color: var(--dark-gray);
+}
+
+.sec2-desktop-btn {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .header .mobile-nav {
+    padding: 50px 100px;
+  }
+
+  .mobile-nav .logo {
+    height: 30px;
+  }
+
+  .header .heading {
+    /* max-width: 600px; */
+    padding: 0px 100px;
+  }
+
+  .heading h1 {
+    font-size: 4rem;
+  }
+
+  .section2 .sec2-gallary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background-image: url(./images/desktop/image-hero.jpg);
+  }
+
+  .header .mobile-nav {
+    display: none;
+  }
+
+  .header .desktop-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-nav .desktop-menu ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  .desktop-menu ul li {
+    font-size: 1.2rem;
+    list-style: none;
+  }
+
+  .desktop-menu ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .desktop-menu ul li a:hover {
+    border-bottom: 2px solid var(--white);
+  }
+
+  .header .heading {
+    max-width: 850px;
+  }
+
+  .heading h1 {
+    font-size: 4rem;
+    padding: 28px;
+  }
+
+  .container .section1 {
+    position: relative;
+    padding: 50px 100px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .section1 .sec1-img-div {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    max-width: 500px;
+    height: 200px;
+  }
+
+  .section1 .sec1-text-div {
+    position: absolute;
+    background-color: var(--white);
+    top: 200px;
+    right: 100px;
+    max-width: 500px;
+    padding: 60px 0px 0px 60px;
+    text-align: left;
+  }
+
+  .sec1-text-div h2 {
+    font-size: 2rem;
+  }
+
+  .sec1-text-div p {
+    font-size: 15px;
+    padding: 0px 0px;
+  }
+
+  .container .section2 {
+    padding: 0px 100px 150px;
+  }
+
+  .section2 .sec2-mobile-btn {
+    display: none;
+  }
+
+  .section2 .sec2-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section2 .sec2-desktop-btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 12px 40px;
+    background-color: transparent;
+    border: 2px solid var(--dark-gray);
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .section2 .sec2-desktop-btn:hover {
+    color: var(--white);
+    background-color: var(--black);
+  }
+
+  .section2 .sec2-gallary {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .sec2-gallary .gallary {
+    width: 100%;
+    height: 420px;
+  }
+
+  .sec2-gallary .gal1 {
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+  }
+
+  .sec2-gallary .gal2 {
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+  }
+
+  .sec2-gallary .gal3 {
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+  }
+
+  .sec2-gallary .gal4 {
+    background-image: url(./images/desktop/image-grid.jpg);
+  }
+
+  .sec2-gallary .gal5 {
+    background-image: url(./images/desktop/image-from-above.jpg);
+  }
+
+  .sec2-gallary .gal6 {
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+  }
+
+  .sec2-gallary .gal7 {
+    background-image: url(./images/desktop/image-curiosity.jpg);
+  }
+
+  .sec2-gallary .gal8 {
+    background-image: url(./images/desktop/image-fisheye.jpg);
+  }
+
+  .gallary p {
+    font-size: 2rem;
+  }
+
+  footer .desktop-footer {
+    display: flex;
+    padding: 50px 100px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .desktop-footer .desktop-footer-top,
+  .desktop-footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-footer-top .desktop-footer-social-media ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .desktop-footer-bottom .links ul {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .desktop-footer-bottom .links ul li {
+    list-style: none;
+  }
+
+  .desktop-footer-bottom .links ul li a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  footer .mobile-footer {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section1 .sec1-img-div {
+    max-width: 800px;
+  }
+
+  .section1 .sec1-text-div {
+    top: 250px;
+    right: 180px;
+    max-width: 550px;
+    padding: 60px 0px 60px 60px;
+  }
+
+  .sec1-text-div h2 {
+    font-size: 3rem;
+  }
+
+  .sec1-text-div p {
+    font-size: 17px;
+  }
 }
