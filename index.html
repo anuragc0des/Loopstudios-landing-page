@@ -35,38 +35,36 @@
             <img src="./images/logo.svg" alt="logo-img" class="logo" />
           </figure>
 
-          <figure class="hamburger">
-            <img
-              src="./images/icon-hamburger.svg"
-              alt="icon-hamburger"
-              class="icon-open"
-            />
-          </figure>
-
-          <div class="mobile-menu mobile-hidden">
-            <nav class="mobile-menu-nav">
-              <figure class="mobile-menu-figure">
-                <img src="./images/logo.svg" alt="mobile-menu-logo" />
-              </figure>
-
-              <img
-                src="./images/icon-close.svg"
-                alt="icon-close"
-                class="icon-close"
-              />
-            </nav>
-
-            <div class="mobile-menu-nav-list">
-              <ul>
-                <li><a href="#" class="hover-link">About</a></li>
-                <li><a href="#" class="hover-link">Careers</a></li>
-                <li><a href="#" class="hover-link">Events</a></li>
-                <li><a href="#" class="hover-link">Products</a></li>
-                <li><a href="#" class="hover-link">Support</a></li>
-              </ul>
-            </div>
-          </div>
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="icon-hamburger"
+            class="hamburger"
+          />
         </nav>
+
+        <div id="mobile-menu" class="hidden">
+          <nav class="mobile-menu-nav">
+            <figure class="mobile-menu-figure">
+              <img src="./images/logo.svg" alt="mobile-menu-logo" />
+            </figure>
+
+            <img
+              src="./images/icon-close.svg"
+              alt="icon-close"
+              class="close-btn"
+            />
+          </nav>
+
+          <div class="mobile-menu-nav-list">
+            <ul>
+              <li><a href="#" class="hover-link">About</a></li>
+              <li><a href="#" class="hover-link">Careers</a></li>
+              <li><a href="#" class="hover-link">Events</a></li>
+              <li><a href="#" class="hover-link">Products</a></li>
+              <li><a href="#" class="hover-link">Support</a></li>
+            </ul>
+          </div>
+        </div>
 
         <nav class="desktop-nav">
           <figure class="logo">
@@ -261,5 +259,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
