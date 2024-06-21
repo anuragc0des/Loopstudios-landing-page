@@ -1,11 +1,11 @@
 const openBtn = document.querySelector(".hamburger");
-const closeBtn = document.querySelector(".closeBtn");
-const mobileMenu = document.querySelector(".mobile-menu");
+const closeBtn = document.querySelector(".close-btn");
+const mobileMenu = document.getElementById(".mobile-menu");
 
 openBtn.addEventListener("click", function () {
-  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.remove("hidden");
 });
 
 closeBtn.addEventListener("click", function () {
-  mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.add("hidden");
 });
