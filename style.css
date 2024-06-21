@@ -65,7 +65,7 @@
   display: none;
 }
 
-.header #mobile-menu {
+.header .mobile-menu {
   position: absolute;
   background-color: var(--black);
   top: 0;
@@ -80,7 +80,7 @@
   z-index: 111;
 }
 
-#mobile-menu .mobile-menu-nav {
+.mobile-menu .mobile-menu-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-#mobile-menu .mobile-menu-nav-list ul {
+.mobile-menu .mobile-menu-nav-list ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
