@@ -35,6 +35,10 @@
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Mobile Nav */
 .header .mobile-nav {
   position: absolute;
@@ -51,17 +55,17 @@
   height: 24px;
 }
 
+.mobile-nav .openBtn {
+  cursor: pointer;
+}
+
 /* Mobile menu design */
 
 .header .desktop-nav {
   display: none;
 }
 
-.mobile-nav .mobile-hidden {
-  display: none;
-}
-
-.nav .mobile-menu {
+.header #mobile-menu {
   position: absolute;
   background-color: var(--black);
   top: 0;
@@ -73,20 +77,21 @@
   display: flex;
   flex-direction: column;
   gap: 100px;
+  z-index: 111;
 }
 
-.mobile-menu .mobile-menu-nav {
+#mobile-menu .mobile-menu-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.mobile-menu-nav figure img {
+.mobile-menu-nav figure .close {
   height: 24px;
   cursor: pointer;
 }
 
-.mobile-menu .mobile-menu-nav-list ul {
+#mobile-menu .mobile-menu-nav-list ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -329,6 +334,10 @@ footer .mobile-footer {
 }
 
 .sec2-desktop-btn {
+  display: none;
+}
+
+.hidden {
   display: none;
 }
 
