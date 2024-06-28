@@ -417,19 +417,19 @@ footer .mobile-footer {
 
   .section1 .sec1-img-div {
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 100px;
-    max-width: 500px;
+    max-width: 450px;
     height: 200px;
   }
 
   .section1 .sec1-text-div {
     position: absolute;
     background-color: var(--white);
-    top: 200px;
+    top: 250px;
     right: 100px;
     max-width: 500px;
-    padding: 60px 0px 0px 60px;
+    padding: 50px 0px 0px 50px;
     text-align: left;
   }
 
@@ -443,7 +443,7 @@ footer .mobile-footer {
   }
 
   .container .section2 {
-    padding: 0px 100px 150px;
+    padding: 50px 100px 150px;
   }
 
   .section2 .sec2-mobile-btn {
@@ -564,12 +564,13 @@ footer .mobile-footer {
 
 @media (min-width: 1280px) {
   .section1 .sec1-img-div {
-    max-width: 800px;
+    max-width: 600px;
+    left: 150px;
   }
 
   .section1 .sec1-text-div {
-    top: 250px;
-    right: 180px;
+    top: 280px;
+    right: 150px;
     max-width: 550px;
     padding: 60px 0px 60px 60px;
   }
